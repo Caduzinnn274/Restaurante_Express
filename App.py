@@ -1,12 +1,14 @@
 import os
 
-restaurantes = ["Pé de banha", "Coritiba feijoadas"]
+#restaurantes = ["Pé de banha", "Coritiba feijoadas"]
+#Inserir dicionario em outra linguagem, chave valor
+restaurante=[{}]
 
 def finalizar_app():
     os.system("clear")
     os.system("cls")
     print("Finalizando o app\n")
-    
+   
 def voltar_menu_principal():
     input("Digite uma tecla para voltar ao menu principal: ")
     main()
@@ -15,7 +17,7 @@ def mostrar_subtitulo(texto):
     os.system("clear")
     print(texto)
     print()
-    
+   
 
 
 def escolher_opcoes():
@@ -33,12 +35,12 @@ def chamar_nome_do_app():
     print("Restaurante Expressao\n")
 
 def listarRestaurantes():
-    
+   
     mostrar_subtitulo('Listando os Restaurantes')
     for restaurante in restaurantes:
         print(f'-{restaurantes}')
         voltar_menu_principal()
-        
+       
 
 def cadastrar_novo_restaurante():
     nome_do_restaurante = input("Digite o nome do novo restaurante: ")
