@@ -2,7 +2,9 @@ import os
 
 #restaurantes = ["Pé de banha", "Coritiba feijoadas"]
 #Inserir dicionario em outra linguagem, chave valor
-restaurante=[{}]
+restaurantes=[{'nome':'Bife sujo','categoria':'prato-feito','ativo':True},
+             {'nome':'Saco de feijao','categoria':'feijoada','ativo':False},
+             {'nome':'Pé de banha','categoria':'pastelaria','ativo':True}]
 
 def finalizar_app():
     os.system("clear")
@@ -32,13 +34,17 @@ def opcao_invalida():
     voltar_menu_principal()
 
 def chamar_nome_do_app():
-    print("Restaurante Expressao\n")
+    print("'ℝ𝕖𝕤𝕥𝕒𝕦𝕣𝕒𝕟𝕥𝕖 𝕖𝕩𝕡𝕣𝕖𝕤𝕤𝕠'")
 
 def listarRestaurantes():
    
     mostrar_subtitulo('Listando os Restaurantes')
     for restaurante in restaurantes:
-        print(f'-{restaurantes}')
+       
+        #modificar a maneira de listar para o dicionario
+        nome_restaurante=restaurantes['nome']
+        categoria=restaurante['categoria']
+        print(f'-{nome_restaurante}--{categoria}')
         voltar_menu_principal()
        
 
