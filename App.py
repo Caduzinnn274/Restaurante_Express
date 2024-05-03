@@ -32,6 +32,14 @@ def opcao_invalida():
 
 def alternar_estado_restaurante():
      mostrar_subtitulo("Alterando o estado do restaurante")
+
+     nome_restaurante = input("Digite o nome do Restaurante que desejas alterar")
+     restaurante_encontrado = False
+
+     for restaurante in restaurantes:
+        if nome_restaurante == restaurante['nome']:
+            restaurante_encontrado = True
+
 def chamar_nome_do_app():
     print("'ℝ𝕖𝕠𝕦𝕣𝕠𝕟𝕠𝕥𝕖 𝕖𝕩𝕡𝕣𝕖𝕠𝕠'")
 
@@ -49,7 +57,7 @@ def listarRestaurantes():
 def cadastrar_novo_restaurante():
     nome_do_restaurante = input("Digite o nome do novo restaurante: ")
     categoria = input(f'Digite a categoria do restaurante{nome_do_restaurante}:')
-    dados_do_restaurante = {'nome': nome_do_restaurante, 'categoria': categoria, 'ativo':True}
+    dados_do_restaurante = {'nome': nome_do_restaurante, 'categoria': categoria, 'ativo':False}
     restaurantes.append(dados_do_restaurante)
     print(f"Você cadastrou o restaurante: {nome_do_restaurante}")
 
