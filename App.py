@@ -39,9 +39,20 @@ def alternar_estado_restaurante():
      for restaurante in restaurantes:
         if nome_restaurante == restaurante['nome']:
             restaurante_encontrado = True
+            restaurante['ativo'] = not restaurante['ativo']
+            mensagem = f'O restaurante {nome_restaurante} foi ativado com sucesso'if restaurante['ativo']else f"O restaurante {nome_restaurante} foi desativado"
+            print(mensagem)
+
+     if not restaurante_encontrado:
+        print("o restaurante não foi encontrado")
+            
+            
+            
+
+            
 
 def chamar_nome_do_app():
-    print("'ℝ𝕖𝕠𝕦𝕣𝕠𝕟𝕠𝕥𝕖 𝕖𝕩𝕡𝕣𝕖𝕠𝕠'")
+    print("""Restaurante Expresso""")
 
 
 
