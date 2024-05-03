@@ -30,8 +30,13 @@ def opcao_invalida():
     mostrar_subtitulo("Opção inválida\n")
     voltar_menu_principal()
 
+def alternar_estado_restaurante():
+     mostrar_subtitulo("Alterando o estado do restaurante")
 def chamar_nome_do_app():
     print("'ℝ𝕖𝕠𝕦𝕣𝕠𝕟𝕠𝕥𝕖 𝕖𝕩𝕡𝕣𝕖𝕠𝕠'")
+
+
+
 
 def listarRestaurantes():
     mostrar_subtitulo('Listando os Restaurantes')
@@ -62,8 +67,8 @@ def main():
                 voltar_menu_principal()
                 main()
             elif opcaodigitada == 3:
-                print("Você escolheu ativar restaurante\n")
-                main()
+                alternar_estado_restaurante()
+                
             elif opcaodigitada == 4:
                 print("Você escolheu sair do aplicativo\n")
                 finalizar_app()
